@@ -1,27 +1,24 @@
-# PortalPwaAngular
+Para executar o projeto siga os seguintes passos:
+=======================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+1. Abra um terminal window/command prompt
+2. Clona o projeto, `git clone https://github.com/anderltda/project-pwa-angular` 
+3. `cd project-pwa-angular` 
+4. `npm install`
 
-## Development server
+Será criado a pasta node_modules dentro do diretorio 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### O que devo fazer?
 
-## Code scaffolding
+- Após a instalação do projeto, já estará apto para roda o projeto.
+- Mas antes, siga os seguintes passos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Dentro do diretorio
+2. Execute o seguinte comando, para iniciar o projeto
 
-## Build
+        ng serve
+        
+3. Abra o browser
+4. Abra o link abaixo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- `http://localhost:4200/`

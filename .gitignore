@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.gitkeep
+
+# Firebase Files
+.firebase
+.firebaserc
+firebase.json

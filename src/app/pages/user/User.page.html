@@ -43,7 +43,9 @@
             <div class="form-group col-md-6">
                 <label for="inputComplement">Complement</label>
                 <input type="text" class="form-control" id="inputComplement" aria-describedby="inputComplement" name="complement" placeholder="Apartment, studio, or floor" formControlName="complement">
-            </div>
+				<small id="inputComplement" class="form-text text-muted" *ngIf="userForm.controls.complement.invalid && userForm.controls.complement.touched">Complement
+					obligatory</small>
+			</div>
             <div class="form-group col-md-6">
                 <label for="inputNeighborhood">Neighborhood</label>
                 <input type="text" class="form-control" id="inputNeighborhood" aria-describedby="inputNeighborhood" name="neighborhood" placeholder="Neighborhood" formControlName="neighborhood">

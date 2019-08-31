@@ -22,3 +22,8 @@ Será criado a pasta node_modules dentro do diretorio
 4. Abra o link abaixo
 
 - `http://localhost:4200/`
+
+
+### Para acessar via hosting firebase
+
+- `https://project-angular-7832e.firebaseapp.com`

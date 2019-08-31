@@ -1,0 +1,113 @@
+<div>
+    <br>
+    <legend>Register</legend>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="cpfHelp">Name</label>
+                <input type="text" class="form-control" id="nameHelp" aria-describedby="nameHelp" name="name" placeholder="Full name" formControlName="name">
+                <small id="nameHelp" class="form-text text-muted" *ngIf="userForm.controls.name.invalid && userForm.controls.name.touched">Name obligatory</small>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cpfHelp">CPF</label>
+                <input type="text" class="form-control" id="cpfHelp" mask="000.000.000-00" aria-describedby="cpfHelp" name="cpf" placeholder="CPF" formControlName="cpf">
+                <small id="cpfHelp" class="form-text text-muted" *ngIf="userForm.controls.cpf.invalid && userForm.controls.cpf.touched">CPF obligatory</small>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="emailHelp">Email</label>
+                <input type="email" class="form-control" id="emailHelp" aria-describedby="emailHelp" name="email" placeholder="E-mail" formControlName="email">
+                <small id="emailHelp" class="form-text text-muted" *ngIf="userForm.controls.email.invalid && userForm.controls.email.touched">E-mail obligatory</small>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="phoneHelp">Phone</label>
+                <input type="tel" class="form-control" mask="(00) 0000-0000" id="phoneHelp" aria-describedby="phoneHelp" name="phone" placeholder="Phone" formControlName="phone">
+                <small id="phoneHelp" class="form-text text-muted" *ngIf="userForm.controls.phone.invalid && userForm.controls.phone.touched">Phone obligatory</small>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="ageHelp">Age</label>
+                <input type="text" class="form-control" mask="00" id="ageHelp" aria-describedby="ageHelp" name="age" placeholder="Age" formControlName="age">
+                <small id="ageHelp" class="form-text text-muted" *ngIf="userForm.controls.age.invalid && userForm.controls.age.touched">Age obligatory</small>
+            </div>
+        </div>
+        <legend>Address</legend>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" aria-describedby="inputAddress" name="address" placeholder="Avenue Paulista, 345" formControlName="address">
+            <small id="inputAddress" class="form-text text-muted" *ngIf="userForm.controls.address.invalid && userForm.controls.address.touched">Address
+				obligatory</small>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputComplement">Complement</label>
+                <input type="text" class="form-control" id="inputComplement" aria-describedby="inputComplement" name="complement" placeholder="Apartment, studio, or floor" formControlName="complement">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputNeighborhood">Neighborhood</label>
+                <input type="text" class="form-control" id="inputNeighborhood" aria-describedby="inputNeighborhood" name="neighborhood" placeholder="Neighborhood" formControlName="neighborhood">
+                <small id="inputNeighborhood" class="form-text text-muted" *ngIf="userForm.controls.neighborhood.invalid && userForm.controls.neighborhood.touched">Neighborhood
+					obligatory</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" aria-describedby="inputCity" name="city" placeholder="City" formControlName="city">
+                <small id="inputCity" class="form-text text-muted" *ngIf="userForm.controls.city.invalid && userForm.controls.city.touched">City obligatory</small>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" name="state" formControlName="state">
+					<option selected>Choose...</option>
+					<option>Acre (AC)</option>
+					<option>Alagoas (AL)</option>
+					<option>Amapá (AP)</option>
+					<option>Amazonas (AM)</option>
+					<option>Bahia (BA)</option>
+					<option>Ceará (CE)</option>
+					<option>Distrito Federal (DF)</option>
+					<option>Espírito Santo (ES)</option>
+					<option>Goiás (GO)</option>
+					<option>Maranhão (MA)</option>
+					<option>Mato Grosso (MT)</option>
+					<option>Mato Grosso do Sul (MS)</option>
+					<option>Minas Gerais (MG)</option>
+					<option>Pará (PA)</option>
+					<option>Paraíba (PB)</option>
+					<option>Paraná (PR)</option>
+					<option>Pernambuco (PE)</option>
+					<option>Piauí (PI)</option>
+					<option>Rio de Janeiro (RJ)</option>
+					<option>Rio Grande do Norte (RN)</option>
+					<option>Rio Grande do Sul (RS)</option>
+					<option>Rondônia (RO)</option>
+					<option>Roraima (RR)</option>
+					<option>Santa Catarina (SC)</option>
+					<option>São Paulo (SP)</option>
+					<option>Sergipe (SE)</option>
+					<option>Tocantins (TO)</option>
+				</select>
+                <small id="inputState" class="form-text text-muted" *ngIf="userForm.controls.state.invalid && userForm.controls.state.touched">State</small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="zipHelp" mask="00000-000" aria-describedby="zipHelp" name="zip" placeholder="Zip" formControlName="zip">
+                <small id="inputZip" class="form-text text-muted" *ngIf="userForm.controls.zip.invalid && userForm.controls.zip.touched">Zip</small>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-info" style="margin: 0px 15px 0px 0px; letter-spacing: 5px" (click)="onBack()">
+				<span>Back</span>
+			</button>
+            <button type="submit" class="btn btn-primary" style="margin: 0px 15px 0px 0px; letter-spacing: 5px" [disabled]="!userForm.valid">
+				<span *ngIf="userId === null">Create</span>
+				<span *ngIf="userId != null">Update</span>
+			</button>
+            <button *ngIf="userId != null" type="button" class="btn btn-danger" style="letter-spacing: 5px" (click)="onRemove()" [disabled]="!userForm.valid">
+				<span>Delete</span>
+			</button>
+        </div>
+    </form>
+</div>

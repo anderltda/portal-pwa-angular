@@ -1,0 +1,42 @@
+<div class="table-responsive-sm">
+		<br>
+		<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th colspan="5">
+                <div class="form-group">
+                    <label for="inputFilter">Filter</label>
+                    <input type="text" class="form-control" id="filtroHelp" type="text" name="filter" (keyup)="setFilterBy($event)">
+                    <small id="filtroHelp" class="form-text text-muted">Input in filter.</small>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" (click)="setOrderBy('asc')">ASC</button>
+                    <button type="button" class="btn btn-primary" (click)="setOrderBy('desc')">DESC</button>
+                </div>
+            </th>
+		</tr>
+	</thead>	
+	<thead>
+        <tr>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table table-hover" *ngFor="let usuario of items | filter: filterBy | order: orderBy">
+
+            <td scope="row"><a href="#" [routerLink]="['/user', usuario.id ]">
+                {{usuario.name}}
+            </a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr class="table">
+            <th style="text-align: center">
+                <button class="btn btn-primary" [routerLink]="['/user' ]">
+                        Create
+                    </button>
+            </th>
+        </tr>
+    </tfoot>
+</table>
+</div>

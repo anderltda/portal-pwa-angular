@@ -2,7 +2,7 @@ Para executar o projeto siga os seguintes passos:
 =======================
 
 1. Abra um terminal window/command prompt
-2. Clona o projeto, `git clone https://github.com/anderltda/project-pwa-angular` 
+2. Clona o projeto, `git clone https://github.com/anderltda/portal-pwa-angular` 
 3. `cd project-pwa-angular` 
 4. `npm install`
 
